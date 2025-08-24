@@ -5,10 +5,10 @@ import streamlit as st
 import os
 import requests
 
-SCRIP_DIR = Path(__file__).parent
+#SCRIP_DIR = Path(__file__).parent
 
 
-gdf = gpd.read_file(SCRIP_DIR / "HYMAP_BlueBound" / "HYSETS_watershed_boundaries" / "HYSETS_watershed_boundaries_20200730.shp")
+gdf = gpd.read_file("HYSETS_watershed_boundaries_20200730.shp")
 
 # If CRS is None, set it to NAD83 (common for HYSETS data)
 if gdf.crs is None:
